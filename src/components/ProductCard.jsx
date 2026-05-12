@@ -1,17 +1,27 @@
 import React from 'react';
 import styles from '../styles/ProductCard.module.css';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onRemove }) => {
   return (
-    <div className>
-      {/* TODO: Apply conditional class to <div> above for out-of-stock items */}
-      
-      {/* TODO: Display product name */}
+    <div
+      className={`${product.available ? styles.productCard : styles.outOfStockClass} ${
+        !product.available ? 'outOfStockClass' : ''
+      }`}
+    >
+      <h2 className={styles.productName}>{product.name}</h2>
+      <span className={product.available ? styles.badgeIn : styles.badgeOut}>
+        {product.available ? 'In Stock' : 'Out of Stock'}
+      </span>
 
-      {/* TODO: Display product price */}
+      <p className={styles.price}>${product.price.toFixed(2)}</p>
 
-      {/* TODO: Show if the product is in stock or out of stock */}
-      
+      <button
+        className={styles.removeBtn}
+        onClick={() => onRemove(product.id)}
+        aria-label={`Remove ${product.name}`}
+      >
+        Remove
+      </button>
     </div>
   );
 };

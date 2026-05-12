@@ -1,3 +1,116 @@
-/* TODO: Style the product card container */
+/* Product List Container */
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 32px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  margin-top: 32px;
+}
 
-/* TODO: Add special styling for out-of-stock products */
+/* Product Card Container */
+.productCard {
+  background: white;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #4f46e5;
+  transform: translateY(-4px);
+}
+
+/* Out of Stock Styling */
+.outOfStockClass {
+  background: #fafafa;
+  border: 2px solid #fecaca;
+  opacity: 0.7;
+}
+
+.outOfStockClass:hover {
+  opacity: 0.85;
+  border-color: #fca5a5;
+}
+
+/* Product Name */
+.productName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+/* Status Badge */
+.badgeIn {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #0369a1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.badgeOut {
+  display: inline-block;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+/* Price */
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+/* Remove Button */
+.removeBtn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.removeBtn:hover {
+  background-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.removeBtn:active {
+  transform: scale(0.98);
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 64px 32px;
+  color: #6b7280;
+  font-size: 18px;
+}
