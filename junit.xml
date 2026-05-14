@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="4" failures="0" errors="0" time="0.129035288">
+    <testsuite name="src/__tests__/indexTest.test.jsx" timestamp="2026-05-14T19:44:57.694Z" hostname="HP-EliteBook-840-G6" tests="4" failures="0" errors="0" skipped="0" time="0.129035288">
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="renders product dashboard title" time="0.081089704">
+        </testcase>
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="displays all products initially" time="0.013830821">
+        </testcase>
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="applies conditional styling for out-of-stock products" time="0.009106766">
+        </testcase>
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="removes product from the dashboard when &quot;Remove&quot; button is clicked" time="0.020489596">
+        </testcase>
+    </testsuite>
+</testsuites>
